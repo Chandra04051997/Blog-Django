@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+
+        {% block title %}
+
+        {% endblock title %}
+
+    </title>
+    {% include 'snippets/style.html' %}
+</head>
+
+<body>
+    {% include 'snippets/navbar.html' %}
+    <div class="container" style="margin-top: 100px;">
+        <h5>
+
+            {% block pageTitle %}
+
+            {% endblock pageTitle %}
+
+        </h5>
+    </div>
+    <div class="container bg-light mt-5 shadow-lg">
+
+        {% block contents %}
+
+        {% endblock contents %}
+    </div>
+
+    {% include 'snippets/script.html' %}
+    <br>
+    <br>
+    <br>
+    {% include 'snippets/footer.html' %}
+</body>
+
+
+</html>
